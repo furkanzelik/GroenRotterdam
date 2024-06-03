@@ -1,0 +1,64 @@
+{
+  "green_places": [
+    {
+      "title": "Vroesenpark",
+      "description": "A large, popular park known for its spacious lawns and community events.",
+      "latitude": 51.93085433309613,
+      "longitude": 4.453256473967735
+    },
+    {
+      "title": "Vrijenburgerbos",
+      "description": "A historic park with picturesque landscapes, located near the Euromast.",
+      "latitude": 51.86832902359505,
+      "longitude": 4.498762208124037
+    },
+    {
+      "title": "Kralingse Bos",
+      "description": "A large forest area surrounding the Kralingse Plas, ideal for hiking and picnicking.",
+      "latitude": 51.9393,
+      "longitude": 4.5153
+    },
+    {
+      "title": "Arboretum Trompenburg",
+      "description": "A botanical garden featuring a wide variety of plants, trees, and flowers.",
+      "latitude": 51.91896052646194,
+      "longitude": 4.518877302802065
+    },
+    {
+      "title": "Museumpark",
+      "description": "A green space in the heart of the city, surrounded by several museums.",
+      "latitude": 51.91241141336361,
+      "longitude": 4.473060126775856
+    },
+    {
+      "title": "Dakpark",
+      "description": "A unique park built on top of a shopping center, offering panoramic views of the city.",
+      "latitude": 51.9191,
+      "longitude": 4.4269
+    },
+    {
+      "title": "Zuiderpark",
+      "description": "The largest park in Rotterdam, featuring sports facilities, lakes, and walking paths.",
+      "latitude": 51.8794382171656,
+      "longitude": 4.479384061976559
+    },
+    {
+      "title": "Park Zestienhoven",
+      "description": "Park area on the edge of town with swings for the children and a meadow area for deer.",
+      "latitude": 51.94243690014477,
+      "longitude": 4.441308800372693
+    },
+    {
+      "title": "Lage Bergse Bos",
+      "description": "Forest area with marked hiking trails, a dog beach, restaurants on a lake and free-ranging livestock.",
+      "latitude": 51.96920423029822,
+      "longitude": 4.516077398267121
+    },
+    {
+      "title": "Het Park",
+      "description": "A hidden gem with beautiful gardens, located near Het Park and the Euromast.",
+      "latitude": 51.9070,
+      "longitude": 4.4723
+    }
+  ]
+}
