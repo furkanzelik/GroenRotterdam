@@ -1,41 +1,16 @@
 import React from 'react';
-import {FlatList, SafeAreaView, SectionList, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, SafeAreaView, SectionList, Text, TouchableOpacity, View, Image, ImageBackground} from 'react-native';
+import background from '../../assets/forrest-bg.png'
 
-const DATA = [
-    {
-        id: 1,
-        name: 'Bossen'
-    },
-    {
-        id: 2,
-        name: 'Tuintjes'
-    },
-    {
-        id: 3,
-        name: 'Parken'
-    },
-    {
-        id: 4,
-        name: 'Natuur gebieden'
-    },
-]
 
 const StartPage = () => {
     return (
       <View style={styles.container}>
-          <Text style={styles.header}>Waar ben je op zoek ?</Text>
-          <FlatList
-              style={styles.list}
-              data={DATA}
-                    renderItem={({item}) => (
-                        <TouchableOpacity>
-                            <View style={styles.itemContainer}>
-                                <Text style={styles.item}>{item.name}</Text>
-                            </View>
-                        </TouchableOpacity> )}
-                        // keyExtractor={(item) => item.id.toString()}
-          >
-          </FlatList>
+    <ImageBackground  style={styles.bg} source={background}>
+        <Text style={styles.header}>Groen Rotterdam</Text>
+        <Text style={styles.text}>Met Groen Rotterdam kan je makkelijk de perfecte groene plekken vinden
+        om te gaan wandelen.</Text>
+    </ImageBackground>
       </View>
     );
 };
@@ -43,35 +18,35 @@ const StartPage = () => {
 const styles = {
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f5fcff',
+    },
+    bg: {
+        width: '100%',
+        height: '100%',
     },
 
-    header:{
-        fontSize: 32,
+    header: {
+        color: 'white',
+        fontSize: 42,
+        lineHeight: 84,
         fontWeight: 'bold',
-        marginBottom: 24,
-        marginTop: 16,
+        textAlign: 'center',
+        backgroundColor: '#000000c0',
     },
 
-    itemContainer:{
-        marginTop: 32,
-        padding: 24,
-        borderRadius: 8,
-        backgroundColor: '#0a5402',
-        borderWidth: 1,
-        borderColor: '#0a5402',
-        alignItems: 'center',
-    },
-
-    item:{
+    text: {
+        color: 'white',
         fontSize: 24,
-        color: '#ffffff',
-    },
-
-    list:{
-        marginTop: 48,
+        lineHeight: 42,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 450,
+        borderWidth: 1,
+        borderStyle: 'solid',
+        borderRadius: 3,
+        borderColor: 'darkgreen',
+        width: '80%',
+        backgroundColor: 'darkgreen',
+        alignSelf: 'center',
     },
 
 
