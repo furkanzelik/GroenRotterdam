@@ -21,7 +21,8 @@ export default function App() {
     <NavigationContainer
     initialRouteName="Start"
     screemOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarActiveTintColor: 'darkgreen',
+        tabBarInactiveTintColor: 'gray',
     }}>
         <Tab.Navigator >
             <Tab.Screen
