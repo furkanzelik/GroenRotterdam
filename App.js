@@ -18,63 +18,52 @@ const Tab = createBottomTabNavigator();
 // navigation container did as the documentation said.
 export default function App() {
     return (
-    <NavigationContainer
-    initialRouteName="Start"
-<<<<<<< HEAD
-    screemOptions={{
-        tabBarActiveTintColor: '#e91e63',
-=======
-    screenOptions={{
-        tabBarActiveTintColor: 'darkgreen',
-        tabBarInactiveTintColor: 'darkgreen',
->>>>>>> origin/master
-    }}>
-        <Tab.Navigator >
-            <Tab.Screen
-                name="Start"
-                component={startPage}
-                options={{
-<<<<<<< HEAD
-=======
-                    headerShown: false,
->>>>>>> origin/master
-                    tabBarLabel:"Home",
-                    tabBarIcon: ({color, size}) => (
-                        <MaterialCommunityIcons name="home" color={color} size={size}/>
-                    ),
-                }}/>
-            <Tab.Screen
-                name="Map"
-                component={mapPage}
-                options={{
-<<<<<<< HEAD
-=======
-                    headerShown: false,
->>>>>>> origin/master
-                    tabBarLabel: "Map",
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="map" color={color} size={size} />
-                    ),
-                }} />
-            <Tab.Screen
-                name="Profile"
-                component={profilePage}
-                options={{
-                    tabBarLabel: "Profile",
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="account" color={color} size={size} />
-                    ),
-                }} />
-        </Tab.Navigator>
-    </NavigationContainer>
-  );
+        <NavigationContainer
+            initialRouteName="Start"
+            screenOptions={{
+                tabBarActiveTintColor: 'darkgreen',
+                tabBarInactiveTintColor: 'darkgreen',
+            }}>
+            <Tab.Navigator >
+                <Tab.Screen
+                    name="Start"
+                    component={startPage}
+                    options={{
+                        headerShown: false,
+                        tabBarLabel:"Home",
+                        tabBarIcon: ({color, size}) => (
+                            <MaterialCommunityIcons name="home" color={color} size={size}/>
+                        ),
+                    }}/>
+                <Tab.Screen
+                    name="Map"
+                    component={mapPage}
+                    options={{
+                        headerShown: false,
+                        tabBarLabel: "Map",
+                        tabBarIcon: ({ color, size }) => (
+                            <MaterialCommunityIcons name="map" color={color} size={size} />
+                        ),
+                    }} />
+                <Tab.Screen
+                    name="Profile"
+                    component={profilePage}
+                    options={{
+                        tabBarLabel: "Profile",
+                        tabBarIcon: ({ color, size }) => (
+                            <MaterialCommunityIcons name="account" color={color} size={size} />
+                        ),
+                    }} />
+            </Tab.Navigator>
+        </NavigationContainer>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
