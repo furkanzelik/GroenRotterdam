@@ -1,8 +1,9 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {Text, View, Image, TouchableOpacity} from 'react-native';
+import {Text, View, Image, TouchableOpacity, SafeAreaView} from 'react-native';
 import MapView, {Marker} from "react-native-maps";
 import greenPlaceData from '../../greenPlaceData.json';
 import * as Location from 'expo-location';
+import Search from '../../components/searchbar/searchBar';
 
 const MapPage = () => {
 
@@ -32,17 +33,22 @@ const MapPage = () => {
     }
 
     const userLocation = () => {   // function to zoom in the user location
-        userPlace.current.animateToRegion({
-            latitude: location.coords.latitude,
-            longitude: location.coords.longitude,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-        }, 2000);
+        console.log("userLocation function called");
+        if (location) {
+            console.log("Location data: ", location); // Log the location data
+            userPlace.current.animateToRegion({
+                latitude: location.coords.latitude,
+                longitude: location.coords.longitude,    // error with fetching the location data
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421,
+            }, 1000);
+        }
     }
 
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
+            <View style={styles.searchbar}><Search/></View>
             <MapView
                 ref={userPlace}
                 style={styles.map}
@@ -59,22 +65,30 @@ const MapPage = () => {
                         title={place.title}
                         description={place.description}
                     >
-                        <Image source={require('../../assets/pin.png')} style={styles.pin}/>
+                        <Image source={require('../../assets/pin.png')} style={styles.pin}
+
+                        />
                     </Marker>
                 ))}
                 {/*<Text style={styles.location}>location: {text} </Text>*/}
 
             </MapView>
-            <TouchableOpacity onPress={() => this.location}>
+            <TouchableOpacity onPress={() => userLocation()}>
                 <Image source={require('../../assets/locations.png')} style={styles.locationPin}/>
             </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     );
 };
 
 const styles = {
     container: {
         flex: 1,
+    },
+
+    searchbar: {
+        zIndex: 1,
+        position: 'absolute',
+        width: '100%',
     },
     map: {
         width: '100%',
