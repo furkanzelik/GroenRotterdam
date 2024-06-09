@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
+    "@react-native-community/geolocation": "^3.2.1",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
     "expo": "~51.0.9",
+    "expo-location": "~17.0.1",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
     "react-native": "0.74.1",
+    "react-native-elements": "^3.4.3",
     "react-native-maps": "1.14.0"
   },
   "devDependencies": {

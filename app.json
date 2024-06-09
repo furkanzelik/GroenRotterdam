@@ -1,5 +1,13 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(GroenRotterdam) to use your location."
+        }
+      ]
+    ],
     "name": "GroenRotterdam",
     "slug": "GroenRotterdam",
     "version": "1.0.0",

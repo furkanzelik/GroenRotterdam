@@ -20,14 +20,24 @@ export default function App() {
     return (
     <NavigationContainer
     initialRouteName="Start"
+<<<<<<< HEAD
     screemOptions={{
         tabBarActiveTintColor: '#e91e63',
+=======
+    screenOptions={{
+        tabBarActiveTintColor: 'darkgreen',
+        tabBarInactiveTintColor: 'darkgreen',
+>>>>>>> origin/master
     }}>
         <Tab.Navigator >
             <Tab.Screen
                 name="Start"
                 component={startPage}
                 options={{
+<<<<<<< HEAD
+=======
+                    headerShown: false,
+>>>>>>> origin/master
                     tabBarLabel:"Home",
                     tabBarIcon: ({color, size}) => (
                         <MaterialCommunityIcons name="home" color={color} size={size}/>
@@ -37,6 +47,10 @@ export default function App() {
                 name="Map"
                 component={mapPage}
                 options={{
+<<<<<<< HEAD
+=======
+                    headerShown: false,
+>>>>>>> origin/master
                     tabBarLabel: "Map",
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="map" color={color} size={size} />

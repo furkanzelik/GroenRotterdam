@@ -1,79 +1,86 @@
 import React from 'react';
-import {FlatList, SafeAreaView, SectionList, Text, TouchableOpacity, View} from 'react-native';
+import {
+    Text,
+    View,
+    ImageBackground,
+    Button,
+    StyleSheet,
+    TouchableOpacity
+} from 'react-native';
+import background from '../../assets/bos.jpg'
 
-const DATA = [
-    {
-        id: 1,
-        name: 'Bossen'
-    },
-    {
-        id: 2,
-        name: 'Tuintjes'
-    },
-    {
-        id: 3,
-        name: 'Parken'
-    },
-    {
-        id: 4,
-        name: 'Natuur gebieden'
-    },
-]
 
-const StartPage = () => {
+const StartPage = ({navigation}) => {
     return (
-      <View style={styles.container}>
-          <Text style={styles.header}>Waar ben je op zoek ?</Text>
-          <FlatList
-              style={styles.list}
-              data={DATA}
-                    renderItem={({item}) => (
-                        <TouchableOpacity>
-                            <View style={styles.itemContainer}>
-                                <Text style={styles.item}>{item.name}</Text>
-                            </View>
-                        </TouchableOpacity> )}
-                        // keyExtractor={(item) => item.id.toString()}
-          >
-          </FlatList>
-      </View>
+        <View style={styles.container}>
+            <ImageBackground style={styles.bg} source={background}>
+                <Text style={styles.header}>Groen Rotterdam</Text>
+                <View style={styles.textContainer}>
+                    <Text style={styles.text}>
+                        Met Groen Rotterdam kan je makkelijk de perfecte groene plekken vinden
+                        om te gaan wandelen.
+                    </Text>
+                </View>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('Map') }
+                >
+                    <Text style={styles.buttonText}>Laten we Beginnen !</Text>
+                </TouchableOpacity>
+            </ImageBackground>
+        </View>
     );
 };
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f5fcff',
+    },
+    bg: {
+        width: '100%',
+        height: '100%',
     },
 
-    header:{
-        fontSize: 32,
+    header: {
+        color: 'white',
+        fontSize: 42,
+        marginTop: '12%',
+        lineHeight: 84,
         fontWeight: 'bold',
-        marginBottom: 24,
-        marginTop: 16,
+        textAlign: 'center',
+        backgroundColor: '#000000c0',
     },
 
-    itemContainer:{
-        marginTop: 32,
-        padding: 24,
-        borderRadius: 8,
-        backgroundColor: '#0a5402',
+    textContainer: {
+        backgroundColor: '#000000c0',
+        borderColor: 'darkgreen',
+        borderRadius: 10,
         borderWidth: 1,
-        borderColor: '#0a5402',
-        alignItems: 'center',
+        marginTop: '62%',
+        width: '80%',
+        alignSelf: 'center',
+        padding: 5,
     },
 
-    item:{
-        fontSize: 24,
-        color: '#ffffff',
+    text: {
+        color: 'white',
+        fontSize: 23,
+        lineHeight: 35,
+        fontWeight: 'bold',
+        textAlign: 'center',
     },
-
-    list:{
-        marginTop: 48,
+    button: {
+        backgroundColor: 'darkgreen',
+        width: '50%',
+        alignSelf: 'center',
+        marginTop: 20,
+        padding: 10,
+        borderRadius: 10,
     },
-
-
-}
+    buttonText: {
+        color: 'white',
+        fontSize: 17,
+        textAlign: 'center',
+    },
+});
 export default StartPage;
