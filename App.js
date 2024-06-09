@@ -29,6 +29,7 @@ export default function App() {
                 name="Start"
                 component={startPage}
                 options={{
+                    headerShown: false,
                     tabBarLabel:"Home",
                     tabBarIcon: ({color, size}) => (
                         <MaterialCommunityIcons name="home" color={color} size={size}/>
@@ -38,6 +39,7 @@ export default function App() {
                 name="Map"
                 component={mapPage}
                 options={{
+                    headerShown: false,
                     tabBarLabel: "Map",
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="map" color={color} size={size} />

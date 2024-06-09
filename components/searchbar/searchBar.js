@@ -19,10 +19,10 @@ const searchBar = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'flex-start',
-        marginTop: "5%",
-        width: 350,
-        marginLeft: 15,
+        justifyContent: 'center',
+        marginTop: "12%",
+        width: '70%',
+        alignSelf: 'center',
 
     },
 

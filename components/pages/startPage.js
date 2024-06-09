@@ -1,9 +1,16 @@
 import React from 'react';
-import {FlatList, SafeAreaView, SectionList, Text, TouchableOpacity, View, Image, ImageBackground} from 'react-native';
-import background from '../../assets/forrest-bg.png'
+import {
+    Text,
+    View,
+    ImageBackground,
+    Button,
+    StyleSheet,
+    TouchableOpacity
+} from 'react-native';
+import background from '../../assets/bos.jpg'
 
 
-const StartPage = () => {
+const StartPage = ({navigation}) => {
     return (
         <View style={styles.container}>
             <ImageBackground style={styles.bg} source={background}>
@@ -14,12 +21,18 @@ const StartPage = () => {
                         om te gaan wandelen.
                     </Text>
                 </View>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('Map') }
+                >
+                    <Text style={styles.buttonText}>Laten we Beginnen !</Text>
+                </TouchableOpacity>
             </ImageBackground>
         </View>
     );
 };
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
@@ -31,6 +44,7 @@ const styles = {
     header: {
         color: 'white',
         fontSize: 42,
+        marginTop: '12%',
         lineHeight: 84,
         fontWeight: 'bold',
         textAlign: 'center',
@@ -38,22 +52,35 @@ const styles = {
     },
 
     textContainer: {
-        backgroundColor: 'darkgreen',
+        backgroundColor: '#000000c0',
         borderColor: 'darkgreen',
         borderRadius: 10,
         borderWidth: 1,
-        marginTop: '110%',
+        marginTop: '62%',
         width: '80%',
         alignSelf: 'center',
-        padding: 10,
+        padding: 5,
     },
 
     text: {
         color: 'white',
-        fontSize: 24,
-        lineHeight: 42,
+        fontSize: 23,
+        lineHeight: 35,
         fontWeight: 'bold',
         textAlign: 'center',
     },
-};
+    button: {
+        backgroundColor: 'darkgreen',
+        width: '50%',
+        alignSelf: 'center',
+        marginTop: 20,
+        padding: 10,
+        borderRadius: 10,
+    },
+    buttonText: {
+        color: 'white',
+        fontSize: 17,
+        textAlign: 'center',
+    },
+});
 export default StartPage;
