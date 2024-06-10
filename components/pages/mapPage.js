@@ -70,7 +70,7 @@ const MapPage = () => {
                         />
                     </Marker>
                 ))}
-                {/*<Text style={styles.location}>location: {text} </Text>*/}
+                <Text style={styles.location}>location: {text} </Text>
 
             </MapView>
             <TouchableOpacity onPress={() => userLocation()}>

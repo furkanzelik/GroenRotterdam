@@ -9,6 +9,7 @@ import {MaterialCommunityIcons} from '@expo/vector-icons';
 import startPage from './components/pages/startPage';
 import mapPage from './components/pages/mapPage';
 import profilePage from './components/pages/profilePage';
+import listPage from './components/pages/listPage';
 import React from "react";
 
 
@@ -43,6 +44,15 @@ export default function App() {
                         tabBarLabel: "Map",
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="map" color={color} size={size} />
+                        ),
+                    }} />
+                <Tab.Screen
+                    name="List of green Places"
+                    component={listPage}
+                    options={{
+                        tabBarLabel: "List",
+                        tabBarIcon: ({ color, size }) => (
+                            <MaterialCommunityIcons name="plus-circle" color={color} size={size} />
                         ),
                     }} />
                 <Tab.Screen
