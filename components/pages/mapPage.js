@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Text, View, Image, TouchableOpacity, SafeAreaView } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import {Text, View, Image, TouchableOpacity, SafeAreaView, Button} from 'react-native';
+import MapView, {Callout, Marker} from 'react-native-maps';
 import * as Location from 'expo-location';
 import Search from '../../components/searchbar/searchBar';
 import greenPlaceData from '../../greenPlaceData.json';
 
-const MapPage = () => {
+const MapPage = ({navigation}) => {
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
     const userPlace = useRef(null);
@@ -44,7 +44,7 @@ const MapPage = () => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.searchbar}><Search /></View>
-            <MapView
+            <MapView  // kaart van Rotterdam
                 ref={userPlace}
                 style={styles.map}
                 initialRegion={{
@@ -54,6 +54,7 @@ const MapPage = () => {
                     longitudeDelta: 0.0421,
                 }}
             >
+                {/*// stuurt naar de locatie van de gebruiker*/}
                 {location && (
                     <Marker
                         coordinate={{
@@ -73,9 +74,20 @@ const MapPage = () => {
                         description={place.description}
                     >
                         <Image source={require('../../assets/pin.png')} style={styles.pin} />
+                        <Callout >
+                            <View style={styles.calloutView} >
+                                <Text style={styles.calloutTitle}>{place.title}</Text>
+                                <Text style={styles.calloutDescription}>{place.description}</Text>
+                                <View style={styles.calloutFlex}>
+                                <Image source={{uri: place.image}} style={styles.calloutImage} />
+                                    <Button title="Meer info" onPress={() => navigation.navigate('List')} />
+                                </View>
+                            </View>
+                        </Callout>
                     </Marker>
                 ))}
             </MapView>
+            {/*stuurt naar de locatie van de gebruiker */}
             <TouchableOpacity onPress={userLocation}>
                 <Image source={require('../../assets/locations.png')} style={styles.locationPin} />
             </TouchableOpacity>
@@ -107,7 +119,31 @@ const styles = {
         width: 60,
         height: 60,
         zIndex: 1,
-    }
+    },
+    calloutView: {
+        width: 300,
+        height: 250,
+        padding: 2,
+        alignItems: 'center',
+    },
+    calloutTitle: {
+        fontWeight: 'bold',
+        fontSize: 16,
+    },
+    calloutDescription: {
+        marginVertical: 5,
+        textAlign: 'center',
+    },
+    calloutImage: {
+        flex: 1,
+        width: 250,
+        height: 150,
+        resizeMode: 'cover',
+
+    },
+    calloutFlex: {
+        flex: 1,
+    },
 };
 
 export default MapPage;

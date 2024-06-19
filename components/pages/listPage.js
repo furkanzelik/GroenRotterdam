@@ -3,7 +3,7 @@ import {Text, View, StyleSheet, FlatList} from 'react-native';
 import Search from '../../components/searchbar/searchBar';
 
 
-const ProfilePage = () => {
+const listPage = () => {
     return (
         <View>
             <Search/>
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
         padding: 24,
     },
 });
-export default ProfilePage
+export default listPage
