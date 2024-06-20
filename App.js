@@ -11,6 +11,7 @@ import mapPage from './components/pages/mapPage';
 import profilePage from './components/pages/profilePage';
 import listPage from './components/pages/listPage';
 import React from "react";
+import MapStack from "./components/mapNavigator/mapNavigation";
 
 
 const Tab = createBottomTabNavigator();
@@ -38,10 +39,10 @@ export default function App() {
                     }}/>
                 <Tab.Screen
                     name="Map"
-                    component={mapPage}
+                    component={MapStack}
                     options={{
                         headerShown: false,
-                        tabBarLabel: "Map",
+                        tabBarLabel: "MapPage",
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="map" color={color} size={size} />
                         ),

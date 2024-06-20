@@ -80,7 +80,7 @@ const MapPage = ({navigation}) => {
                                 <Text style={styles.calloutDescription}>{place.description}</Text>
                                 <View style={styles.calloutFlex}>
                                 <Image source={{uri: place.image}} style={styles.calloutImage} />
-                                    <Button title="Meer info" onPress={() => navigation.navigate('List')} />
+                                    <Button title="Meer info" onPress={() => navigation.navigate('infoPlace')} />
                                 </View>
                             </View>
                         </Callout>
