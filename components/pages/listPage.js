@@ -1,44 +1,74 @@
-import React, {useEffect, useState} from 'react';
-import {Text, View, StyleSheet, FlatList, Pressable, Image, StatusBar, Button} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Text, View, StyleSheet, FlatList, Pressable, Image, StatusBar, TouchableOpacity,Button } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import Search from '../../components/searchbar/searchBar';
 
-
-const ListPage = ({navigation}) => {
+const ListPage = ({ navigation }) => {
     const [greenPlaceData, setGreenPlaceData] = useState([]);
+    const [favorites, setFavorites] = useState({});
 
     useEffect(() => {
-        (async () => {
+        const fetchData = async () => {
             try {
                 const response = await fetch("https://raw.githubusercontent.com/furkanzelik/GroenRotterdam/master/greenPlaceData.json");
                 const json = await response.json();
-                setGreenPlaceData(json.green_places); // Zorg ervoor dat je het juiste pad naar de gegevens gebruikt
+                setGreenPlaceData(json.green_places);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
-        })();
-    }, []); // dependenct leeg schrijven zodat het maar 1 keer wordt uitgevoerd
+        };
 
+        const loadFavorites = async () => {
+            try {
+                const storedFavorites = await AsyncStorage.getItem('favorites');
+                if (storedFavorites !== null) {
+                    setFavorites(JSON.parse(storedFavorites));
+                }
+            } catch (error) {
+                console.error('Error loading favorites:', error);
+            }
+        };
 
+        fetchData();
+        loadFavorites();
+    }, []);
 
+    const toggleFavorite = async (item) => {
+        const newFavorites = {
+            ...favorites,
+            [item.title]: !favorites[item.title]
+        };
+        setFavorites(newFavorites);
+        try {
+            await AsyncStorage.setItem('favorites', JSON.stringify(newFavorites));
+        } catch (error) {
+            console.error('Error saving favorites:', error);
+        }
+    };
+
+    const isFavorite = (item) => favorites[item.title];
 
     return (
         <View style={styles.container}>
-            <Search/>
+            <Search />
             <FlatList
                 style={styles.flatList}
                 data={greenPlaceData}
                 horizontal={false}
                 numColumns={2}
-                // columnWrapperStyle={styles.row}
                 keyExtractor={(item, index) => index.toString()}
-                renderItem={({item, image}) => (
+                renderItem={({ item }) => (
                     <View style={styles.items}>
                         <Pressable onPress={() => console.log(item.title)}>
                             <Text style={styles.itemTitle}>{item.title}</Text>
-                            <Image style={styles.itemImage} source={{uri: item.image}}/>
+                            <Image style={styles.itemImage} source={{ uri: item.image }} />
                             <View style={styles.buttonDirection}>
-                                <Button title={"Meer info"} onPress={() => navigation.navigate('infoPlace')}/>
-                                <Button title={"Like"} onPress={() => console.log(`like: ${item.title}`)}/>
+                                <Button title={"Meer info"} onPress={() => navigation.navigate('infoPlace')} />
+                                <TouchableOpacity onPress={() => toggleFavorite(item)}>
+                                    <Icon style={styles.heart} name="heart" size={24} color={isFavorite(item) ? 'red' : 'grey'} />
+                                </TouchableOpacity>
                             </View>
                         </Pressable>
                     </View>
@@ -55,7 +85,7 @@ const styles = StyleSheet.create({
     },
 
     flatList: {
-        marginTop: "15%"
+        marginTop: "15%",
     },
 
     items: {
@@ -67,7 +97,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         flex: 2,
         borderTopWidth: 1,
-        borderTopRadius: 25,
+        borderRadius: 25,
     },
 
     itemTitle: {
@@ -86,6 +116,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginHorizontal: 10,
+    },
+
+    heart: {
+        marginVertical: 4,
+        marginHorizontal: 2,
     },
 });
 
