@@ -55,7 +55,7 @@ const ListPage = ({navigation}) => {
         }
     };
 
-    const isFavorite = (item) => favorites[item.title];
+    const isFavorite = (item,place) => favorites[item.title];
 
     const filteredData = showFavoritesOnly ? greenPlaceData.filter(isFavorite) : greenPlaceData; // filter de data op favorieten
 
@@ -79,10 +79,14 @@ const ListPage = ({navigation}) => {
                             <Text style={[styles.itemTitle, {color: isDarkTheme ? '#fff' : '#000'}]}>{item.title}</Text>
                             <Image style={styles.itemImage} source={{uri: item.image}}/>
                             <View style={styles.buttonDirection}>
-                                <Button title="Meer info" onPress={() => navigation.navigate('infoPlace', {
-                                    placeTitle: item.title,
-                                    placeDescription: item.longDescription
-                                })}/>
+                                <Button
+                                    title="Meer info"
+                                    onPress={() => navigation.navigate('infoPlace', {
+                                        placeTitle: item.title,
+                                        placeImage: item.image,
+                                        placeLongDescription: item.longDescription,
+                                    })}
+                                />
                                 <TouchableOpacity onPress={() => toggleFavorite(item)}>
                                     <Icon style={styles.heart} name="heart" size={24}
                                           color={isFavorite(item) ? 'red' : 'grey'}/>

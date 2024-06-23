@@ -2,80 +2,80 @@
   "green_places": [
     {
       "title": "Vroesenpark",
-      "description": "A large, popular park known for its spacious lawns and community events.",
-      "longDescription": "Vroesenpark is a beloved spot for Rotterdammers, offering a green escape in the heart of the city. With its sprawling lawns, it's perfect for picnics, sunbathing, or simply relaxing amidst nature. The park also comes alive with various community events throughout the year, making it a vibrant hub for social gatherings and local culture.",
+      "description": "Een groot, populair park dat bekend staat om zijn ruime grasvelden en gemeenschapsevenementen.",
+      "longDescription": "Vroesenpark is een geliefde plek voor Rotterdammers, die een groene ontsnapping in het hart van de stad biedt. Met zijn uitgestrekte grasvelden is het perfect voor picknicks, zonnebaden of gewoon ontspannen te midden van de natuur. Het park komt ook tot leven met verschillende gemeenschapsevenementen gedurende het jaar, waardoor het een levendige hub is voor sociale bijeenkomsten en lokale cultuur.",
       "latitude": 51.93085433309613,
       "longitude": 4.453256473967735,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/VroesenPark.jpg?raw=true"
     },
     {
       "title": "Vrijenburgerbos",
-      "description": "A historic park with picturesque landscapes, located near the Euromast.",
-      "longDescription": "Vrijenburgerbos is a tranquil oasis in the bustling city of Rotterdam. With its lush greenery, winding paths, and serene ponds, it offers a peaceful retreat for nature lovers and outdoor enthusiasts. The park is also home to a variety of wildlife, making it a great spot for birdwatching and nature photography.",
+      "description": "Een historisch park met schilderachtige landschappen, gelegen nabij de Euromast.",
+      "longDescription": "Vrijenburgerbos is een rustige oase in de bruisende stad Rotterdam. Met zijn weelderige groen, kronkelende paden en serene vijvers biedt het een vredig toevluchtsoord voor natuurliefhebbers en buitenenthousiasten. Het park herbergt ook een verscheidenheid aan wilde dieren, waardoor het een geweldige plek is voor vogels kijken en natuurfotografie.",
       "latitude": 51.86832902359505,
       "longitude": 4.498762208124037,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/Vrijenburgbos.jpeg?raw=true"
     },
     {
       "title": "Kralingse Bos",
-      "description": "A large forest area surrounding the Kralingse Plas, ideal for hiking and picnicking.",
-      "longDescription": "Kralingse Bos is a scenic forest area that surrounds the Kralingse Plas, a popular lake in Rotterdam. The park is a favorite spot for locals and visitors alike, offering a range of outdoor activities such as hiking, cycling, and picnicking. With its lush greenery, tranquil waters, and diverse wildlife, Kralingse Bos is the perfect place to escape the hustle and bustle of the city and reconnect with nature.",
+      "description": "Een groot bosgebied rond de Kralingse Plas, ideaal om te wandelen en te picknicken.",
+      "longDescription": "Kralingse Bos is een schilderachtig bosgebied dat de Kralingse Plas omringt, een populair meer in Rotterdam. Het park is een favoriete plek voor zowel de lokale bevolking als bezoekers en biedt een scala aan buitenactiviteiten zoals wandelen, fietsen en picknicken. Met zijn weelderige groen, rustige wateren en diverse wilde dieren is Kralingse Bos de perfecte plek om te ontsnappen aan de drukte van de stad en opnieuw in contact te komen met de natuur.",
       "latitude": 51.9393,
       "longitude": 4.5153,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/KralingseBos.png?raw=true"
     },
     {
       "title": "Trompenburg",
-      "description": "A botanical garden featuring a wide variety of plants, trees, and flowers.",
-      "longDescription": "Arboretum Trompenburg is a hidden gem in Rotterdam, offering a peaceful escape from the city's hustle and bustle. The botanical garden is home to a diverse collection of plants, trees, and flowers from around the world, making it a paradise for nature lovers and gardening enthusiasts. With its serene atmosphere, winding paths, and picturesque landscapes, Arboretum Trompenburg is the perfect place to relax, unwind, and reconnect with nature.",
+      "description": "Een botanische tuin met een grote verscheidenheid aan planten, bomen en bloemen.",
+      "longDescription": "Arboretum Trompenburg is een verborgen parel in Rotterdam en biedt een vredige ontsnapping aan de drukte van de stad. De botanische tuin herbergt een diverse collectie planten, bomen en bloemen van over de hele wereld, waardoor het een paradijs is voor natuurliefhebbers en tuinliefhebbers. Met zijn serene sfeer, kronkelende paden en schilderachtige landschappen is Arboretum Trompenburg de perfecte plek om te ontspannen, tot rust te komen en opnieuw in contact te komen met de natuur.",
       "latitude": 51.91896052646194,
       "longitude": 4.518877302802065,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/AboretumTuin.jpeg?raw=true"
     },
     {
       "title": "Museumpark",
-      "description": "A green space in the heart of the city, surrounded by several museums.",
-      "longDescription": "Museumpark is a vibrant cultural hub in Rotterdam, home to several museums, galleries, and cultural institutions. The park itself is a green oasis in the heart of the city, offering a peaceful retreat for visitors and locals alike. With its lush lawns, scenic ponds, and modern sculptures, Museumpark is the perfect place to relax, unwind, and soak up some culture.",
+      "description": "Een groene ruimte in het hart van de stad, omringd door verschillende musea.",
+      "longDescription": "Museumpark is een levendige culturele hub in Rotterdam, waar verschillende musea, galerieën en culturele instellingen zijn gevestigd. Het park zelf is een groene oase in het hart van de stad en biedt een vredig toevluchtsoord voor bezoekers en de lokale bevolking. Met zijn weelderige grasvelden, schilderachtige vijvers en moderne sculpturen is Museumpark de perfecte plek om te ontspannen, tot rust te komen en wat cultuur op te snuiven.",
       "latitude": 51.91241141336361,
       "longitude": 4.473060126775856,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/Museumpark.jpg?raw=true"
     },
     {
       "title": "Dakpark",
-      "description": "A unique park built on top of a shopping center, offering panoramic views of the city.",
-      "longDescription": "Dakpark is a one-of-a-kind park in Rotterdam, located on the rooftop of a shopping center. The park offers stunning panoramic views of the city, making it a popular spot for locals and visitors alike. With its lush greenery, modern design, and vibrant atmosphere, Dakpark is the perfect place to relax, socialize, and enjoy the beauty of Rotterdam from above.",
+      "description": "Een uniek park gebouwd op een winkelcentrum, met panoramisch uitzicht over de stad.",
+      "longDescription": "Dakpark is een uniek park in Rotterdam, gelegen op het dak van een winkelcentrum. Het park biedt een prachtig panoramisch uitzicht over de stad en is een populaire plek voor zowel de lokale bevolking als bezoekers. Met zijn weelderige groen, modern design en levendige sfeer is Dakpark de perfecte plek om te ontspannen, socializen en te genieten van de schoonheid van Rotterdam van bovenaf.",
       "latitude": 51.9191,
       "longitude": 4.4269,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/Dakpark.jpg?raw=true"
     },
     {
       "title": "Zuiderpark",
-      "description": "The largest park in Rotterdam, featuring sports facilities, lakes, and walking paths.",
-      "longDescription": "Zuiderpark is the largest park in Rotterdam, offering a wide range of recreational activities for visitors of all ages. The park features sports facilities, playgrounds, lakes, and walking paths, making it a popular destination for families, sports enthusiasts, and nature lovers. With its lush greenery, scenic landscapes, and vibrant atmosphere, Zuiderpark is the perfect place to relax, unwind, and enjoy the outdoors in the heart of the city.",
+      "description": "Het grootste park in Rotterdam, met sportfaciliteiten, meren en wandelpaden.",
+      "longDescription": "Zuiderpark is het grootste park in Rotterdam en biedt een breed scala aan recreatieve activiteiten voor bezoekers van alle leeftijden. Het park beschikt over sportfaciliteiten, speeltuinen, meren en wandelpaden, waardoor het een populaire bestemming is voor gezinnen, sportliefhebbers en natuurliefhebbers. Met zijn weelderige groen, schilderachtige landschappen en levendige sfeer is Zuiderpark de perfecte plek om te ontspannen, tot rust te komen en te genieten van de buitenlucht in het hart van de stad.",
       "latitude": 51.8794382171656,
       "longitude": 4.479384061976559,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/Zuiderpark.jpg?raw=true"
     },
     {
       "title": "Park Zestienhoven",
-      "description": "Park area on the edge of town with swings for the children and a meadow area for deer.",
-      "longDescription": "Park Zestienhoven is a hidden gem on the edge of Rotterdam, offering a peaceful retreat for visitors of all ages. The park features a variety of amenities, including playgrounds, walking paths, and a meadow area where deer roam freely. With its lush greenery, scenic landscapes, and tranquil atmosphere, Park Zestienhoven is the perfect place to relax, unwind, and reconnect with nature.",
+      "description": "Parkgebied aan de rand van de stad met schommels voor kinderen en een weidegebied voor herten.",
+      "longDescription": "Park Zestienhoven is een verborgen parel aan de rand van Rotterdam en biedt een vredig toevluchtsoord voor bezoekers van alle leeftijden. Het park heeft verschillende voorzieningen, waaronder speeltuinen, wandelpaden en een weidegebied waar herten vrij rondlopen. Met zijn weelderige groen, schilderachtige landschappen en rustige sfeer is Park Zestienhoven de perfecte plek om te ontspannen, tot rust te komen en opnieuw in contact te komen met de natuur.",
       "latitude": 51.94243690014477,
       "longitude": 4.441308800372693,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/Parkzestienhoven.jpg?raw=true"
     },
     {
       "title": "Lage Bergse Bos",
-      "description": "Forest area with marked hiking trails, a dog beach, restaurants on a lake and free-ranging livestock.",
-      "longDescription": "Lage Bergse Bos is a scenic forest area in Rotterdam, offering a range of outdoor activities for visitors of all ages. The park features marked hiking trails, a dog beach, restaurants on a lake, and free-ranging livestock, making it a popular destination for nature lovers and outdoor enthusiasts. With its lush greenery, tranquil waters, and diverse wildlife, Lage Bergse Bos is the perfect place to relax, unwind, and enjoy the beauty of nature.",
+      "description": "Bosgebied met gemarkeerde wandelroutes, een hondenstrand, restaurants aan een meer en vrijlopende dieren.",
+      "longDescription": "Lage Bergse Bos is een schilderachtig bosgebied in Rotterdam en biedt een scala aan buitenactiviteiten voor bezoekers van alle leeftijden. Het park beschikt over gemarkeerde wandelroutes, een hondenstrand, restaurants aan een meer en vrijlopende dieren, waardoor het een populaire bestemming is voor natuurliefhebbers en buitenenthousiasten. Met zijn weelderige groen, rustige wateren en diverse wilde dieren is Lage Bergse Bos de perfecte plek om te ontspannen, tot rust te komen en te genieten van de schoonheid van de natuur.",
       "latitude": 51.96920423029822,
       "longitude": 4.516077398267121,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/lagebergsebos.jpg?raw=true"
     },
     {
       "title": "Het Park",
-      "description": "A hidden gem with beautiful gardens, located near Het Park and the Euromast.",
-      "longDescription": "Het Park is a hidden gem in Rotterdam, offering a peaceful escape from the city's hustle and bustle. The park features beautiful gardens, scenic walking paths, and picturesque landscapes, making it a popular spot for nature lovers and outdoor enthusiasts. With its lush greenery, tranquil atmosphere, and stunning views of the city, Het Park is the perfect place to relax, unwind, and reconnect with nature.",
+      "description": "Een verborgen parel met prachtige tuinen, gelegen nabij Het Park en de Euromast.",
+      "longDescription": "Het Park is een verborgen parel in Rotterdam en biedt een vredige ontsnapping aan de drukte van de stad. Het park beschikt over prachtige tuinen, schilderachtige wandelpaden en pittoreske landschappen, waardoor het een populaire plek is voor natuurliefhebbers en buitenenthousiasten. Met zijn weelderige groen, rustige sfeer en prachtig uitzicht op de stad is Het Park de perfecte plek om te ontspannen, tot rust te komen en opnieuw in contact te komen met de natuur.",
       "latitude": 51.9070,
       "longitude": 4.4723,
       "image": "https://github.com/furkanzelik/GroenRotterdam/blob/master/assets/greenPlaceIMG/HetPark.jpg?raw=true"

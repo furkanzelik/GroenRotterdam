@@ -9,15 +9,13 @@ import {MaterialCommunityIcons} from '@expo/vector-icons';
 import startPage from './components/pages/startPage';
 import listPage from './components/pages/listPage';
 import React, {useEffect, useState} from "react";
-import MapStack from "./components/mapNavigator/mapNavigation";
+import MapStack from "./components/stackNavigator/mapNavigation";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import ProfilePage from "./components/pages/profilePage";
 import {ThemeContext, darkMode} from "./components/context/ThemeContext";
-
+import ReactNativeBiometrics from 'react-native-biometrics'
 
 const Tab = createBottomTabNavigator();
-
-
 
 
 // navigation container zoals de documentatie van react-navigation aangeeft

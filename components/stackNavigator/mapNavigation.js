@@ -2,6 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import MapPage from '../pages/mapPage';
 import infoPlace from "../pages/infoPlace";
+import Listpage from "../pages/listPage";
 
 const Stack = createStackNavigator();
 
