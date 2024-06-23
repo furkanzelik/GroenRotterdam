@@ -3,7 +3,6 @@ import {
     Text,
     View,
     ImageBackground,
-    Button,
     StyleSheet,
     TouchableOpacity
 } from 'react-native';
@@ -23,7 +22,7 @@ const StartPage = ({navigation}) => {
                 </View>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => navigation.navigate('Map') }
+                    onPress={() => navigation.navigate('Map') } // navigate to map page
                 >
                     <Text style={styles.buttonText}>Laten we Beginnen !</Text>
                 </TouchableOpacity>

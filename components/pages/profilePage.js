@@ -1,25 +1,27 @@
 import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import profileDefault from '../../assets/userDefault.png';
+import {ThemeContext} from '../context/ThemeContext';
 
 const ProfilePage = () => {
+    const {isDarkTheme, toggleDarkmode} = React.useContext(ThemeContext);
     return (
-        <View style={styles.page}>
-            <View style={styles.header}>
+        <View style={[styles.page, {backgroundColor: isDarkTheme ? '#333' : '#fff'}]}>
+            <View style={[styles.header, {backgroundColor: isDarkTheme ? '#444' : '#008000'}]}>
                 <Image
                     style={styles.profileImage}
                     source={profileDefault}
                 />
             </View>
             <View style={styles.container}>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Plaatsen die je leuk vindt</Text>
+                <TouchableOpacity style={styles.button} onPress={toggleDarkmode}>
+                    <Text style={[styles.buttonText, {color: isDarkTheme ? '#fff' : '#000'}]}>
+                        {isDarkTheme ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+                    </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Dark/Light mode</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Plaatsen een plekkie erbij</Text>
+                    <Text style={[styles.buttonText, {color: isDarkTheme ? '#fff' : '#000'}]}>Plaatsen een plekkie
+                        erbij</Text>
                 </TouchableOpacity>
             </View>
         </View>

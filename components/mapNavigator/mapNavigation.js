@@ -9,7 +9,7 @@ function MapStack() {
     return (
         <Stack.Navigator initialRouteName="Map">
             <Stack.Screen
-                name="Map"
+                name="map"
                 component={MapPage}
                 options={{ headerShown: false }}
             />

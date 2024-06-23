@@ -1,18 +1,20 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {Text, View, Image, TouchableOpacity, SafeAreaView, Button} from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
 import * as Location from 'expo-location';
 import Search from '../../components/searchbar/searchBar';
 import greenPlaceData from '../../greenPlaceData.json';
+import {ThemeContext} from "../context/ThemeContext";
 
 const MapPage = ({navigation}) => {
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
     const userPlace = useRef(null);
+    const {isDarkTheme, toggleDarkmode} = React.useContext(ThemeContext);
 
     useEffect(() => {
         (async () => {
-            let { status } = await Location.requestForegroundPermissionsAsync();
+            let {status} = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
                 setErrorMsg('Permission to access location was denied');
                 return;
@@ -41,10 +43,13 @@ const MapPage = ({navigation}) => {
         }
     }
 
+
     return (
-        <SafeAreaView style={styles.container}>
-            <View style={styles.searchbar}><Search /></View>
-            <MapView  // kaart van Rotterdam
+        // Kaart van Rotterdam
+
+        <SafeAreaView style={[styles.container, {backgroundColor: isDarkTheme ? '#333' : '#fff'}]}>
+            <View style={styles.searchbar}><Search/></View>
+            <MapView
                 ref={userPlace}
                 style={styles.map}
                 initialRegion={{
@@ -52,8 +57,7 @@ const MapPage = ({navigation}) => {
                     longitude: 4.47917,
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,
-                }}
-            >
+                }}>
                 {/*// stuurt naar de locatie van de gebruiker*/}
                 {location && (
                     <Marker
@@ -68,19 +72,23 @@ const MapPage = ({navigation}) => {
 
                 {greenPlaceData.green_places.map((place, index) => (
                     <Marker
+                        //markers voor de groene plekken
                         key={index}
-                        coordinate={{ latitude: place.latitude, longitude: place.longitude }}
+                        coordinate={{latitude: place.latitude, longitude: place.longitude}}
                         title={place.title}
-                        description={place.description}
-                    >
-                        <Image source={require('../../assets/pin.png')} style={styles.pin} />
-                        <Callout >
-                            <View style={styles.calloutView} >
+                        description={place.description}>
+                        <Image source={require('../../assets/pin.png')} style={styles.pin}/>
+                        <Callout>
+                            <View style={styles.calloutView}>
                                 <Text style={styles.calloutTitle}>{place.title}</Text>
                                 <Text style={styles.calloutDescription}>{place.description}</Text>
                                 <View style={styles.calloutFlex}>
-                                <Image source={{uri: place.image}} style={styles.calloutImage} />
-                                    <Button title="Meer info" onPress={() => navigation.navigate('infoPlace')} />
+                                    <Image source={{uri: place.image}} style={styles.calloutImage}/>
+                                    <Button title="Meer info" onPress={() => navigation.navigate('infoPlace', {
+                                        placeTitle: place.title,
+                                        placeImage: place.image,
+                                        placeLongDescription: place.longDescription,
+                                    })}/>
                                 </View>
                             </View>
                         </Callout>
@@ -89,7 +97,7 @@ const MapPage = ({navigation}) => {
             </MapView>
             {/*stuurt naar de locatie van de gebruiker */}
             <TouchableOpacity onPress={userLocation}>
-                <Image source={require('../../assets/locations.png')} style={styles.locationPin} />
+                <Image source={require('../../assets/locations.png')} style={styles.locationPin}/>
             </TouchableOpacity>
         </SafeAreaView>
     );
