@@ -14,15 +14,16 @@ const ListPage = ({navigation}) => {
     const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
     const {isDarkTheme, toggleDarkmode} = useContext(ThemeContext);
 
-    useEffect(() => {
+    useEffect(() => {  // useEffect om ook andere functies uit te voeren (favorieten)
         // fetch data van de groene plaatsen via github "een online server"
-        const fetchData = async () => {
-            try {
+        const fetchData = async () => {  // async functie om data op te halen
+            try { // probeer de data op te halen
                 const response = await fetch("https://raw.githubusercontent.com/furkanzelik/GroenRotterdam/master/greenPlaceData.json");
-                const json = await response.json();
-                setGreenPlaceData(json.green_places);
+                //gegevens worden opgehaald van de server de await zorgt ervoor dat de code wacht tot de gegevens zijn opgehaald
+                const json = await response.json(); // de gegevens worden omgezet naar json
+                setGreenPlaceData(json.green_places); // de gegevens worden in de state gezet
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Error fetching data:', error); // error handeling
             }
         };
 
@@ -44,7 +45,7 @@ const ListPage = ({navigation}) => {
 
     const toggleFavorite = async (item) => { // functie om favorieten toe te voegen of te verwijderen
         const newFavorites = {
-            ...favorites,
+            ...favorites, // kopie van de favorieten
             [item.title]: !favorites[item.title]
         };
         setFavorites(newFavorites);

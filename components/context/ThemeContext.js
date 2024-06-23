@@ -6,7 +6,6 @@ const darkMode = {
     colors: {
         ...DarkTheme.colors,
         background: 'black',
-        card: 'black',
         text: 'white',
         border: 'white',
     },

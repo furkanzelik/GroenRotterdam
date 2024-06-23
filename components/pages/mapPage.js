@@ -14,13 +14,13 @@ const MapPage = ({navigation}) => {
 
     useEffect(() => {
         (async () => {
-            let {status} = await Location.requestForegroundPermissionsAsync();
+            let {status} = await Location.requestForegroundPermissionsAsync();  // vraagt toestemming aan de gebruiker om de locatie te gebruiken
             if (status !== 'granted') {
                 setErrorMsg('Permission to access location was denied');
                 return;
             }
 
-            let location = await Location.getCurrentPositionAsync({});
+            let location = await Location.getCurrentPositionAsync({}); // haalt de locatie van de gebruiker op
             setLocation(location);
         })();
     }, []);
@@ -33,6 +33,7 @@ const MapPage = ({navigation}) => {
     }
 
     const userLocation = () => {
+        // stuurt naar de locatie van de gebruiker
         if (location) {
             userPlace.current.animateToRegion({
                 latitude: location.coords.latitude,
@@ -58,7 +59,7 @@ const MapPage = ({navigation}) => {
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,
                 }}>
-                {/*// stuurt naar de locatie van de gebruiker*/}
+                {/*// stuurt naar de locatie van de gebruiker als je er op klikt*/}
                 {location && (
                     <Marker
                         coordinate={{

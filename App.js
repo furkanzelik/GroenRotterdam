@@ -25,7 +25,7 @@ const Tab = createBottomTabNavigator();
 
         useEffect(() => {
             const loadTheme = async () => {
-                const theme = await AsyncStorage.getItem('theme');
+                const theme = await AsyncStorage.getItem('theme'); // de gebruiker heef all een default thema
                 setIsDarkTheme(theme === 'dark');
             }
             loadTheme();
@@ -34,7 +34,7 @@ const Tab = createBottomTabNavigator();
         const toggleDarkmode = async () => {
             const newTheme = !isDarkTheme ? 'light' : 'dark';
             setIsDarkTheme(!isDarkTheme);
-            await AsyncStorage.setItem('theme', newTheme);
+            await AsyncStorage.setItem('theme', newTheme);  // hier sla ik de keuze van de gebruiker op en blijft het thema hetzelfde als vde app opnieuw opent van wegen de async storage
         }
 
         return (

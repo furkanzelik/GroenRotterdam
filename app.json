@@ -10,7 +10,7 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow $(GroenRotterdam) to use your location."
+          "locationAlwaysAndWhenInUsePermission": "Allow $(GroenRotterdam) to use your location." // hier vraagt expo of Groen Rotterdam de locatie mag gebruiken
         }
       ]
     ],
